@@ -27,5 +27,7 @@ export default function ToDoList({
         </button>
       </div>
     );
+  } else {
+    return <div></div>;
   }
 }
