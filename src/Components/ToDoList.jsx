@@ -6,23 +6,26 @@ export default function ToDoList({
   toggleCompleted,
   deleteCompleted,
 }) {
-  return (
-    <div>
-      <section className="toDoList">
-        {toDoList.map((toDo) => {
-          return (
-            <ToDoItem
-              toDo={toDo}
-              toggleCompleted={toggleCompleted}
-              deleteCompleted={deleteCompleted}
-            />
-          );
-        })}
-      </section>
-      <button className="btn" onClick={deleteCompleted}>
-        {" "}
-        Delete Completed
-      </button>
-    </div>
-  );
+  if (toDoList.length > 0) {
+    return (
+      <div>
+        <section className="toDoList">
+          {toDoList.map((toDo) => {
+            return (
+              <ToDoItem
+                toDo={toDo}
+                toggleCompleted={toggleCompleted}
+                deleteCompleted={deleteCompleted}
+              />
+            );
+          })}
+        </section>
+
+        <button className="btn" onClick={deleteCompleted}>
+          {" "}
+          Delete Completed
+        </button>
+      </div>
+    );
+  }
 }
