@@ -9,8 +9,12 @@ export default function Form({ addTask }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTask(value);
-    setValue("");
+    if (value === "" || value === " ") {
+      alert("Please Enter a Task");
+    } else {
+      addTask(value);
+      setValue("");
+    }
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -20,7 +24,7 @@ export default function Form({ addTask }) {
         onChange={handleChange}
         placeholder="Add new Task"
       />
-      <button> Add Task </button>
+      <button className="btn"> Add Task </button>
     </form>
   );
 }

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Header from "./Components/Header";
 import ToDoList from "./Components/ToDoList";
 import Form from "./Components/Form";
-import "./App.css";
 import "./index.css";
 
 export default function App() {
@@ -35,7 +34,7 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <Header />
       <ToDoList
         toDoList={toDoList}

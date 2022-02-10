@@ -23,7 +23,7 @@ export default function ToDoList({
 
         <button className="btn" onClick={deleteCompleted}>
           {" "}
-          Delete Completed
+          Delete Completed Tasks
         </button>
       </div>
     );
